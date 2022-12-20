@@ -60,10 +60,10 @@ def mapa ():
             <div class="card" style="width: 18rem;">
             <img src="{ubicacion.imagen}" class="card-img-top" alt="...">
             <div class="card-body">
-            <h5 class="card-title">{ubicacion.nombre}</h5>
+            <h5><b class="card-title">{ubicacion.nombre}</b></h5>
             <p class="card-text"><ul></li>\n<li><b>Categoria:</b> {ubicacion.categoria}</li>\n<li><b>
-            Contacto: </b>{ubicacion.contacto}</li>\n<li><b>Pagina: </b>{ubicacion.pagina}</li></p></ul></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            Contacto: </b>{ubicacion.contacto}</li>\n<li><b>Pagina: </b></li></p></ul></p>
+            <a href="{ubicacion.pagina}" class="btn btn-primary">ir a la pagina</a>
             </div>
             </div>"""
 #f"""<img class="center-block" src="{ubicacion.imagen}" 
