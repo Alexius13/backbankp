@@ -61,12 +61,13 @@ def mapa ():
             <img src="{ubicacion.imagen}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">{ubicacion.nombre}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text"><ul></li>\n<li><b>Categoria:</b> {ubicacion.categoria}</li>\n<li><b>
+            Contacto: </b>{ubicacion.contacto}</li>\n<li><b>Pagina: </b>{ubicacion.pagina}</li></p></ul></p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
             </div>"""
 #f"""<img class="center-block" src="{ubicacion.imagen}" 
-       # width="350px">\n<ul><li><b class="text-center" class="row text-center">Nombre:</b> 
+# width="350px">\n<ul><li><b class="text-center" class="row text-center">Nombre:</b> 
         """{ubicacion.nombre}</li>\n<li><b>Categoria:</b> {ubicacion.categoria}</li>\n<li><b>
         Contacto: </b>{ubicacion.contacto}</li>\n<li><b>Pagina: </b>{ubicacion.pagina}</li></p></ul>
         <img class="center-block">"""
