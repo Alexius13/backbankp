@@ -57,12 +57,12 @@ def mapa ():
 
     for ubicacion in ubicaciones:
         tarjeta = f"""
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 350px;">
             <img src="{ubicacion.imagen}" class="card-img-top" alt="...">
             <div class="card-body">
-            <h5><b class="card-title">{ubicacion.nombre}</b></h5>
-            <p class="card-text"><ul></li>\n<li><b>Categoria:</b> {ubicacion.categoria}</li>\n<li><b>
-            Contacto: </b>{ubicacion.contacto}</li>\n<li><b>Pagina: </b></li></p></ul></p>
+            <h4><b class="card-title">{ubicacion.nombre}</b></h4>
+            <p class="card-text"><h5><ul></li><li><b>Categoria:</b> {ubicacion.categoria}</li><li><b>
+            Contacto: </b>{ubicacion.contacto}</li><li><b>Para crear una cuenta presione: </b></li></p></ul></h5></p>
             <a href="{ubicacion.pagina}" class="btn btn-primary">ir a la pagina</a>
             </div>
             </div>"""
