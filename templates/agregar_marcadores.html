@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <title>Agregar Marcadores</title>
+</head>
+
+<body>
+    <h1>Agregar Marcadores</h1>
+    <form action="" method="post">
+        <label for="nombre">Nombre entidad financiera: </label>
+        <input type="text" name="nombre">
+        <label for="categoria">Categoria: </label>
+        <input type="text" name="categoria">
+        <label for="pagina">Pagina:</label>
+        <input type="text" name="pagina">
+        <label for="contacto">Contacto:</label>
+        <input type="text" name="contacto">
+        <label for="imagen">Imagen:</label>
+        <input type="text" name="imagen">
+        <label for="lat">Latitud:</label>
+        <input type="text" name="lat" id="latitud">
+        <label for="lon">Longitud:</label>
+        <input type="text" name="lon" id="longitud">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map').setView([-25.302223289426216, -57.58111798774653], 18);
+        var marker
+        L.tileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+
+            }
+        ).addTo(map);
+
+        map.on('click', function (e) {
+            if (marker) marker.remove();
+            var lat = e.latlng.lat;
+            document.getElementById('latitud').value = lat;
+            var lng = e.latlng.lng;
+            document.getElementById('longitud').value = lng;
+            var marker = L.marker([lat, lng]).addTo(map);
+        });
+
+    </script>
+</body>
+
+</html>
